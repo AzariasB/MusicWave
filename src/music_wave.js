@@ -3,7 +3,6 @@
  Author     : boutina
  */
 import $ from 'jquery';
-import music from './sad_robot.mp3';
 import './less/style.less';
 
 $(document).ready(function() {
@@ -11,9 +10,7 @@ $(document).ready(function() {
 	var fps = 60;
 
 	//Audio var
-	document.getElementById('audioSource').src = `/${music}`;
 	var audioElem = document.getElementById('audio');
-	audioElem.load();
 	var audioCtx = new AudioContext();
 	var analyser = audioCtx.createAnalyser();
 	var source, frequenceData;

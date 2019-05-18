@@ -34,12 +34,15 @@ module.exports = {
 				]
 			},
 			{
-				test    : /\.mp3$/,
-				loader  : 'file-loader',
-				options : {
-					outputPath : outputPath,
-					publicPath : outputPath
-				}
+				test : /\.mp3$/,
+				use  : [
+					{
+						loader  : 'file-loader',
+						options : {
+							outputPath : outputPath
+						}
+					}
+				]
 			}
 		]
 	},
